@@ -1,0 +1,84 @@
+---
+// import React from "react";
+import Layout from "../layouts/Layout.astro";
+
+// const Grouping = ({ title, children }) => {
+//   return (
+//     <section class="max-w-[300px] flex flex-col shadow-lg rounded-xl bg-white p-4">
+//       <h2>{title}</h2>
+//       {children}
+//     </section>
+//   );
+// };
+---
+
+<Layout title="Parkour moves">
+  <div class="flex flex-row flex-wrap p-6 gap-6 justify-center">
+    <section
+      class="max-w-[300px] flex flex-col shadow-lg rounded-xl bg-white p-4"
+    >
+      <h2 class="font-bold">Vaults</h2>
+      <ul class="list-disc ml-4">
+        <li class="">Lazy vault</li>
+        <li>Gate vault</li>
+        <li>Thief vault</li>
+        <li>Saftey vault</li>
+        <li>Dash vault</li>
+        <li>Reverse vault</li>
+        <li><a href="/moves/kong">Kong</a></li>
+      </ul>
+    </section>
+
+    <section
+      class="max-w-[300px] flex flex-col shadow-lg rounded-xl bg-white p-4"
+    >
+      <h2 class="font-bold">Flips</h2>
+      <ul class="list-disc ml-4">
+        <li><a href="./moves/webster">Webster</a></li>
+        <li>Front flip</li>
+        <li>Back flip</li>
+        <li>Side flip</li>
+      </ul>
+    </section>
+
+    <section
+      class="max-w-[300px] flex flex-col shadow-lg rounded-xl bg-white p-4"
+    >
+      <h2 class="font-bold">Rolls</h2>
+      <ul class="list-disc ml-4">
+        <ul class="list-disc">
+          <li>Parkour roll</li>
+          <li>Safety roll</li>
+          <li>Diving roll</li>
+        </ul>
+      </ul>
+    </section>
+
+    <section
+      class="max-w-[300px] flex flex-col shadow-lg rounded-xl bg-white p-4"
+    >
+      <h2 class="font-bold">Twists and Spins</h2>
+      <ul class="list-disc ml-4">
+        <li>A-twist</li>
+        <li>B-twist</li>
+        <li>Corkscrew</li>
+        <li>Rail spin</li>
+        <li>Wall spin</li>
+      </ul>
+    </section>
+
+    <section
+      class="max-w-[300px] flex flex-col shadow-lg rounded-xl bg-white p-4"
+    >
+      <h2 class="font-bold">Other</h2>
+      <ul class="list-disc ml-4">
+        <li><a href="/moves/cosplay">Cosplay</a></li>
+      </ul>
+    </section>
+  </div>
+  <style>
+    a {
+      color: blue;
+    }
+  </style>
+</Layout>

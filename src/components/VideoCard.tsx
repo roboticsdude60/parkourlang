@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 
+const collectedMoves = ["webster", "kong", "cosplay"];
+
 const VideoCard: React.FC<{
   username: string;
   trickName: string;
@@ -39,9 +41,13 @@ const VideoCard: React.FC<{
         </a>
       </div>
       <div className="text-sm text-blue-500 px-4 my-2 flex flex-wrap gap-2">
-        {trickTags?.map((tag) => (
-          <a href={`/moves/${tag}`}>#{tag}</a>
-        ))}
+        {trickTags?.map((tag) => {
+          console.log(tag, collectedMoves);
+          if (collectedMoves.includes(tag)) {
+            return <a href={`/moves/${tag}`}>#{tag}</a>;
+          }
+          return <span className="text-gray-500">#{tag}</span>;
+        })}
       </div>
     </div>
   );

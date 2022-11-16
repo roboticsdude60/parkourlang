@@ -1,0 +1,42 @@
+---
+import VideoCard from "../../components/VideoCard";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Cosplay">
+  <div class="flex justify-center">
+    <header
+      class="rounded-lg m-6 drop-shadow-lg max-w-md h-[28rem] flex flex-col justify-center bg-white p-6"
+    >
+      <h1 class="m-6 text-4xl text-center">Cosplay</h1>
+      <p class="m-6">
+        Parkour videos that include dressing up and acting like a character,
+        especially one from a video game or movie.
+      </p>
+    </header>
+  </div>
+
+  <div class="flex flex-wrap gap-6 justify-center p-6">
+    <VideoCard
+      client:visible
+      canonicalLink="https://www.instagram.com/p/Bug3YemDh3D/"
+      cachedLink="https://cdn.glitch.global/de350676-520f-4f87-b3b5-059abafcaa0e/ronniestreetstunts_descent.mp4?v=1668554748968"
+      username="ronniestreetstunts"
+      trickName="Descent"
+      trickTags={["descent", "spiderman", "cosplay", "parking_garage"]}
+    >
+      A common descent for parkour atheletes is the side of a parking garage. In
+      this clip Ronnie descends from the 6th floor while wearing a spider-man
+      costume.
+    </VideoCard>
+
+    <VideoCard
+      client:visible
+      canonicalLink="https://www.instagram.com/p/CS-aESolE4L/"
+      cachedLink="https://cdn.glitch.global/de350676-520f-4f87-b3b5-059abafcaa0e/ronniestreetstunts_minecraft.mp4?v=1668573723111"
+      username="ronniestreetstunts"
+      trickName="Minecraft"
+      trickTags={["minecraft", "cosplay"]}
+    />
+  </div>
+</Layout>

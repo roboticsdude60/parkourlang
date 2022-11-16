@@ -1,0 +1,35 @@
+---
+import VideoCard from "../../components/VideoCard";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Kong">
+  <div class="flex justify-center">
+    <header
+      class="rounded-lg m-6 drop-shadow-lg max-w-md h-[28rem] flex flex-col justify-center bg-white p-6"
+    >
+      <h1 class="m-6 text-4xl text-center">Kong</h1>
+      <p class="m-6">
+        Probably in reference to king kong. This move is sometimes known as the
+        monkey vault. It is performed by placing the hands on an obstacle in
+        front as one jumps up and over. The feet generally come up between the
+        hands as one clears the obstacle.
+      </p>
+    </header>
+  </div>
+
+  <div class="flex flex-wrap gap-6 justify-center p-6">
+    <VideoCard
+      client:visible
+      canonicalLink="https://www.instagram.com/reel/CZDhAZNF91N/"
+      cachedLink="https://cdn.glitch.global/de350676-520f-4f87-b3b5-059abafcaa0e/calen_chan_kong_gainer_pre.mp4?v=1668549002238"
+      username="calen_chan"
+      trickName="Kong gainer pre"
+      trickTags={["kong_gainer_pre", "kong", "gainer", "pre", "kong_gainer"]}
+    >
+      Jumping over the first wall is the kong. The flip while traveling in a
+      forwards direction makes it a gainer. We add the modifier suffix 'pre'
+      because of the precision landing on another wall. An impressive trick.
+    </VideoCard>
+  </div>
+</Layout>

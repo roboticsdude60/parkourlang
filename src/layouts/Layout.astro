@@ -1,6 +1,6 @@
 ---
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,35 +8,49 @@ const { title } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="bg-gray-100">
-		<nav>
-			<ul class="flex items-center h-16 bg-[#663399]">
-				<li class="p-5 text-white"><a href="/">Home</a></li>
-				<li class="p-5 text-white"><a href="/moves" >Parkour Moves</a></li>
-				<li class="p-5 text-white"><a href="/athletes">Featured Athletes</a></li>
-			</ul>
-		</nav>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-100 min-h-[100vh] flex flex-col">
+    <nav>
+      <ul class="flex items-center h-16 bg-[#663399]">
+        <li class="p-5 text-white"><a href="/">Parkourlang</a></li>
+        <li class="p-5 text-white"><a href="/athletes">Athletes</a></li>
+        <li class="p-5 text-white"><a href="/moves">Moves</a></li>
+      </ul>
+    </nav>
+    <div class="min-h-full">
+      <slot />
+    </div>
+
+    <footer class="text-center mt-auto mb-1">
+      ©2022 made with ❤️ by Joseph Scholl <br />
+      <a class="underline" href="https://github.com/roboticsdude60/parkourlang"
+        >@roboticsdude60/parkourlang</a
+      >
+    </footer>
+    <style is:global>
+      :root {
+        --accent: 124, 58, 237;
+        --accent-gradient: linear-gradient(
+          45deg,
+          rgb(var(--accent)),
+          #da62c4 30%,
+          white 60%
+        );
+      }
+      html {
+        font-family: system-ui, sans-serif;
+        background-color: #f6f6f6;
+      }
+      code {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+      }
+    </style>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>

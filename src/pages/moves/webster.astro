@@ -1,0 +1,64 @@
+---
+import VideoCard from "../../components/VideoCard";
+import Layout from "../../layouts/Layout.astro";
+const title = "Webster";
+---
+
+<Layout title={title}>
+  <div class="flex justify-center">
+    <header
+      class="rounded-lg m-6 drop-shadow-lg max-w-md h-[28rem] flex flex-col justify-center bg-white p-6"
+    >
+      <h1 class="m-6 text-4xl text-center">{title}</h1>
+      <p class="m-6">
+        This is basically a front flip performed while jumping off of one leg.
+        The other leg is usually swung up and behind during the jump to help
+        with rotation.
+      </p>
+    </header>
+  </div>
+
+  <div class="flex flex-wrap gap-6 justify-center items-center p-6">
+    <VideoCard
+      client:visible
+      canonicalLink="https://www.instagram.com/reel/CerRg3pMaN_/"
+      cachedLink="https://cdn.glitch.global/de350676-520f-4f87-b3b5-059abafcaa0e/reagan%20chan%20webster%20loser.mp4?v=1664077360210"
+      username="reagan_chan_"
+      trickName="Webster loser"
+      trickTags={["loser_webster", "webster", "loser"]}
+    >
+      Jumping off a graffitied wall, she performs a loser webster to the sand
+      below.
+    </VideoCard>
+    <VideoCard
+      client:visible
+      canonicalLink="https://www.instagram.com/p/CkWEcwUAszd/"
+      cachedLink="https://cdn.glitch.global/de350676-520f-4f87-b3b5-059abafcaa0e/silky.zigzag_jungle_gym.mp4?v=1668574660753"
+      username="silky.zigzag"
+      trickName="Jungle gym fun"
+      trickTags={["cat_leap", "underbar", "front_flip", "back_flip", "webster"]}
+    >
+      In this clip Silke cat leaps to a tower in the park before climbing into
+      it. She leaves the top with a cool underbar to front flip.
+    </VideoCard>
+    <VideoCard
+      client:visible
+      canonicalLink="https://www.instagram.com/reel/CfFUG_4MyBD/"
+      cachedLink="https://cdn.glitch.global/de350676-520f-4f87-b3b5-059abafcaa0e/webster_reagan_chan_.mp4?v=1668639448649"
+      username="reagan_chan_"
+      trickName="Webster"
+      trickTags={["webster", "frontflip"]}
+      >Reagan does a webster flipping from one ledge to another on the grassy
+      hill.
+    </VideoCard>
+
+    <VideoCard
+      client:visible
+      canonicalLink="https://www.instagram.com/p/CS-aESolE4L/"
+      cachedLink="https://cdn.glitch.global/de350676-520f-4f87-b3b5-059abafcaa0e/ronniestreetstunts_minecraft.mp4?v=1668573723111"
+      username="ronniestreetstunts"
+      trickName="Minecraft"
+      trickTags={["minecraft", "cosplay", "webster"]}
+    />
+  </div>
+</Layout>
