@@ -1,0 +1,62 @@
+---
+import VideoCard from "../../../components/VideoCard";
+import Layout from "../../../layouts/Layout.astro";
+const username = "ronniestreetstunts";
+---
+
+<Layout title="Ronnie Shalvis">
+  <div class="flex flex-wrap flex-row justify-center items-center gap-6 p-6">
+    <img src={`/${username}/profile.jpg`} class="rounded-3xl shadow-lg" />
+
+    <div class="max-w-xl rounded-t-xl bg-white rounded-xl shadow-lg p-6">
+      <h1 class="text-center text-3xl font-bold my-2">Ronnie Shalvis</h1>
+      <p class="">
+        In addition to parkour, Ronnie is an accomplished stunt performer. He
+        has a youtube channel ronniestreetstunts with over a million
+        subscribers. One of the best videos on the channel MALL COP VS PARKOUR
+        features his father as the antagonist. Ronnie is also known for his
+        excelent video tutorials.
+      </p>
+      <div class="-my-2 text-gray-400 text-center">~</div>
+      <div class="text-center text-gray-500">
+        Visit their instagram <a
+          class="text-gradient"
+          href={`https://instagram.com/${username}/`}>@{username}</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-wrap gap-8 p-6 justify-center">
+    <VideoCard
+      client:visible
+      canonicalLink="https://www.instagram.com/p/Bug3YemDh3D/"
+      cachedLink="https://cdn.glitch.global/de350676-520f-4f87-b3b5-059abafcaa0e/ronniestreetstunts_descent.mp4?v=1668554748968"
+      username={username}
+      trickName="Descent"
+      trickTags={["descent", "spiderman", "cosplay", "parking_garage"]}
+    >
+      A common descent for parkour atheletes is the side of a parking garage. In
+      this clip Ronnie descends from the 6th floor while wearing a spider-man
+      costume.
+    </VideoCard>
+
+    <VideoCard
+      client:visible
+      canonicalLink="https://www.instagram.com/p/CS-aESolE4L/"
+      cachedLink="https://cdn.glitch.global/de350676-520f-4f87-b3b5-059abafcaa0e/ronniestreetstunts_minecraft.mp4?v=1668573723111"
+      username={username}
+      trickName="Minecraft"
+      trickTags={["minecraft", "cosplay"]}
+    />
+    <style>
+      .text-gradient {
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400%;
+        background-position: 0%;
+      }
+    </style>
+  </div>
+</Layout>

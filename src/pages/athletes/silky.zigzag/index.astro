@@ -1,0 +1,48 @@
+---
+import VideoCard from "../../../components/VideoCard";
+import Layout from "../../../layouts/Layout.astro";
+const username = "silky.zigzag";
+const fullName = "𝚂𝚒𝚕𝚔𝚎 𝚂𝚘𝚕𝚕𝚏𝚛𝚊𝚗𝚔";
+---
+
+<Layout title={fullName}>
+  <div class="flex flex-wrap flex-row justify-center items-center gap-6 p-6">
+    <img src={`/${username}/profile.jpg`} class="rounded-3xl shadow-lg" />
+
+    <div class="max-w-xl rounded-t-xl bg-white rounded-xl shadow-lg p-6">
+      <h1 class="text-center text-3xl font-bold my-2">{fullName}</h1>
+      <p class="">Based in Frankfurt Germany, Silke is part of @teamashigaru</p>
+      <div class="-my-2 text-gray-400 text-center">~</div>
+      <div class="text-center text-gray-500">
+        Visit their instagram <a
+          class="text-gradient"
+          href={`https://instagram.com/${username}/`}>@{username}</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-wrap gap-8 p-6 justify-center">
+    <VideoCard
+      client:visible
+      canonicalLink="https://www.instagram.com/p/CkWEcwUAszd/"
+      cachedLink="https://cdn.glitch.global/de350676-520f-4f87-b3b5-059abafcaa0e/silky.zigzag_jungle_gym.mp4?v=1668574660753"
+      username={username}
+      trickName="Jungle gym fun"
+      trickTags={["cat_leap", "underbar", "front_flip", "back_flip"]}
+    >
+      In this clip Silke cat leaps to a tower in the park before climbing into
+      it. She leaves the top with a cool underbar to front flip.
+    </VideoCard>
+
+    <style>
+      .text-gradient {
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400%;
+        background-position: 0%;
+      }
+    </style>
+  </div>
+</Layout>
